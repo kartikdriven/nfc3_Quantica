@@ -1,0 +1,81 @@
+.agro-buddy {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.logo {
+  margin-right: 20px;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li {
+  font-weight: bold;
+}
+
+.main {
+  padding: 20px;
+}
+
+.hero-section {
+  text-align: center;
+  background-image: url('/home/prasannkhamkar79/Projects/hackathon/npc_hackathon/frontend/public/bg01.jpg'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero-section .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-section .buttons button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.about-section {
+  margin-top: 40px;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.5;
+}
