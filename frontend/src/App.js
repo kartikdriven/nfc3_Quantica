@@ -10,8 +10,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <ProtectedRoute path="/" element={Home} />
+        <ProtectedRoute path="/" element={<Home/>} />
         <ProtectedRoute path="/soil-compatibility" element={SoilCompatibility} />
         <ProtectedRoute path="/crop-disease" element={CropDisease} />
       </Routes>
