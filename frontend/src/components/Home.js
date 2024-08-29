@@ -2,14 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import Navbar from './Navbar'
+import SoilCompatibility from './SoilCompatiblity';
+import CropDisease from './CropDisease';
 
 const Home = () => {
   return (
     <div className="agro-buddy">
       <Navbar />
-      <header className="header">
-        <h1><Link to="/" className="title-link">AGRO BUDDY</Link></h1> {/* Clickable Title */}
-      </header>
 
       <main className="main">
         <div className="hero-section">

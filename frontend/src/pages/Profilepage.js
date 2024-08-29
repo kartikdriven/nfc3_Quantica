@@ -38,7 +38,7 @@ const ProfilePage = () => {
     window.recaptchaVerifier = new RecaptchaVerifier('recaptcha-container', {
       'size': 'invisible',
       'callback': (response) => {
-        handleSignIn();
+        // Removed the call to undefined handleSignIn function
       }
     }, auth);
 

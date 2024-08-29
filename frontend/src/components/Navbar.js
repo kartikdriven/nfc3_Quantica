@@ -8,12 +8,12 @@ const Navbar = () => {
   return (
     <header className="header">
         <div className='profile'>
-            <Link to="/ProfilePage"><button>Profile</button></Link>
+            <Link to="/profile-page"><button>Profile</button></Link>
         </div>
-    <div className='Nav-title'>AGRO BUDDY</div>
+    <div className='Nav-title'><h1><Link to="/" className="title-link">AGRO BUDDY</Link></h1></div>
     <nav>
       <ul>
-        <button className='nav-button'>Check Soil Compatibility</button>
+        <Link to=""></Link><button className='nav-button'>Check Soil Compatibility</button>
         <button className='nav-button'>Check Crop Compatibility</button>
         <button className='nav-button'>Weather Forecast</button>
         <button className='nav-button'>Contact & Support</button>
