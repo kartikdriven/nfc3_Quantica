@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}" />
+
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Agro Harvest Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Thasadith:400,400i,700,700i&amp;subset=latin-ext,thai,vietnamese" rel="stylesheet">
+
+    <style>
+        header {
+            background-color: rgba(30, 30, 30, 1);
+            margin-top: 0rem;
+            display: block;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #4CAF50; /* Farm-themed green */
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: normal;
+            font-family: 'Thasadith', sans-serif; /* Farm-like font */
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #e0f7fa !important; /* Light blue on hover */
+            background-color: rgba(0, 0, 0, 0.1); /* Slight background color on hover */
+        }
+
+        .navbar-nav .nav-link.active {
+            font-weight: bold;
+            background-color: #388e3c; /* Darker green for active link */
+        }
+
+        .navbar-toggler-icon {
+            background-image: url('data:image/svg+xml,...'); /* Custom icon for better fit */
+        }
+
+        /* Logo styling */
+        .logo2 {
+            font-family: 'Thasadith', sans-serif;
+            font-size: 2rem;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{ url_for('home') }}">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('crop_recommend') }}">Soil Health</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('fertilizer_recommendation') }}">Fertilizer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('disease_prediction') }}">Crop Health</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('irrigation_management') }}">Irrigation Management</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% block body %} {% endblock %}
+
+    <!-- footer -->
+    <footer class="text-center py-5">
+        <div class="container py-md-3">
+            <!-- logo -->
+            <h2 class="logo2 text-center">
+                <a href="{{ url_for('home') }}">
+                    KRISHISUTRA
+                </a>
+            </h2>
+            <!-- //logo -->
+            <div class="contact-left-footer mt-4">
+                <!-- <a href="community.html">Community</a> -->
+                </p>
+            </div>
+            <p class="homelogo">
+            <p>Made with ❤️ by Quantica</p>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- move top icon -->
+    <a href="#home" class="move-top text-center"></a>
+    <!-- //move top icon -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

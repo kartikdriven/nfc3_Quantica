@@ -1,0 +1,116 @@
+{% extends 'layout.html' %} 
+{% block body %}
+
+<head>
+    <style>
+        body {
+            font-family: "Garamond", serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        /* Background styling */
+        .backgroundImage {
+            background-image: url("/static/images/farming_background.jpg");
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Overlay effect */
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        /* Main content styling */
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 50px;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #4CAF50; /* Farm-themed green */
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 25px;
+            color: #333;
+            display: block;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        input {
+            font-size: 20px;
+            padding: 10px;
+            width: 80%;
+            margin: 10px 0;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #333;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="backgroundImage">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>SMART IRRIGATION SYSTEM</h1>
+
+            <p>A smart irrigation system uses sensors and AI to monitor soil moisture and weather, optimizing water usage by delivering precise amounts to crops, reducing waste, and enhancing crop yields.</p>
+
+            <form action="{{ url_for('irrigation_management') }}" method="POST">
+                <label for="mc">Moisture Content (in lb/cubic feet):</label>
+                <input id="mc" name="m_c" type="text" placeholder="Enter moisture content" /><br>
+
+                <label for="t">Temperature (in Celsius):</label>
+                <input id="t" name="temp" type="text" placeholder="Enter temperature" /><br>
+
+                <button type="submit">Check Pump Status</button>
+            </form>
+
+            <h2>{{ output }}</h2>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
